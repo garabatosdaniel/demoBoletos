@@ -1,0 +1,26 @@
+<h1>Tablero de Salidas</h1>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Ciudad de Mexico</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <head>
+    	<th>Hora</th>
+    	<th>Destino</th>
+    	<th>Lugares<br/>Disponibles</th>
+    </head>
+    <tbody>
+		<tr ng-repeat="item in salidas">
+			<td>{{item.hora}}</td>
+			<td>{{item.destino}}</td>
+			<td>{{item.disponibles}}/{{item.total}}</td>
+			
+		</tr>    
+    </tbody>
+    
+  </table>
+</div>

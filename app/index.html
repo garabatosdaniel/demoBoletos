@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/select2/select2.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -24,8 +25,8 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/listaSalidas">Salidas</a></li>
+          <li><a ng-href="#/compraBoletos">Compar Boletos</a></li>
+          <li><a ng-href="#/listaSalidas">Ver Salidas</a></li>
         </ul>
         <h3 class="text-muted">boletos</h3>
       </div>
@@ -78,6 +79,10 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/select2/select2.js"></script>
+    <script src="bower_components/angular-ui-select2/src/select2.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-date/src/date.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -86,6 +91,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/listasalidas.js"></script>
+        <script src="scripts/controllers/compraboletos.js"></script>
         <!-- endbuild -->
 </body>
 </html>

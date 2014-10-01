@@ -3,22 +3,27 @@
   <!-- Default panel contents -->
   <div class="panel-heading">Ciudad de Mexico</div>
   <div class="panel-body">
-    <p>...</p>
+    <p>Los horarios estan sujetos a cambios sin previo aviso</p>
   </div>
 
   <!-- Table -->
-  <table class="table">
+  <table class="table table-striped">
     <head>
-    	<th>Hora</th>
-    	<th>Destino</th>
-    	<th>Lugares<br/>Disponibles</th>
+    	<th>Salida</th>
+      <th>Llegada</th>
+      <th>Destino</th>
+      <th>Escalas</th>
+    	<th>Disponibles</th>
+      <th>Autobús</th>
     </head>
     <tbody>
 		<tr ng-repeat="item in salidas">
-			<td>{{item.hora}}</td>
+			<td>{{item.departure}}</td>
+      <td>{{item.arrival}}</td>
 			<td>{{item.destino}}</td>
-			<td>{{item.disponibles}}/{{item.total}}</td>
-			
+      <td>{{item.escalas}}</td>
+			<td>{{item.disponibles}}</td>
+			<td>{{item.puerta}}</td>
 		</tr>    
     </tbody>
     

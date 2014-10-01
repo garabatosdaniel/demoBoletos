@@ -1,0 +1,42 @@
+<div class="row">
+
+<div class="col-sm-12">
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <label class="sr-only" for="Origen">Origen</label>
+      <input type="text" class="form-control" id="Origen" placeholder="Origen">
+      <select ng-model="zoom" ui-select2="" ng-options="z.name as z.name for z in estates"></select>
+
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="Destino">Destino</label>
+      <input type="text" class="form-control" id="Destino" placeholder="Destino">
+    </div>
+    <button type="submit" class="btn btn-info">Buscar</button>
+  </form>
+</div>
+  <div class="col-sm-12">
+    <h2>Resultados</h2>
+      <table class="table table-striped">
+        <thead>
+          <th>Horario</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Tiempo estimado</th>
+          <th>Precio</th>
+          <th>Disponibles</th>
+
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in serchResult">
+            <td>{{item.horario}}</td>
+            <td>{{item.terminalSalida}}</td>
+            <td>{{item.terminalLlegada}}</td>
+            <td>{{item.tiempoEstidmado}}</td>
+            <td>{{item.precio}}</td>
+            <td>{{item.disponibles}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>

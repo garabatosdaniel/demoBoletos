@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.date',
+    'ui.select2'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -34,6 +36,10 @@ angular
       .when('/listaSalidas', {
         templateUrl: 'views/listasalidas.html',
         controller: 'ListasalidasCtrl'
+      })
+      .when('/compraBoletos', {
+        templateUrl: 'views/compraboletos.html',
+        controller: 'CompraboletosCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -10,9 +10,11 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/select2/select2.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/gridster/dist/jquery.gridster.min.css" />
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/grid.css">
     <!-- endbuild -->
   </head>
   <body ng-app="boletosApp">
@@ -27,6 +29,7 @@
           <li class="active"><a ng-href="#">Home</a></li>
           <li><a ng-href="#/compraBoletos">Compar Boletos</a></li>
           <li><a ng-href="#/listaSalidas">Ver Salidas</a></li>
+          <li><a ng-href="#/camion">Camion</a></li>
         </ul>
         <h3 class="text-muted">boletos</h3>
       </div>
@@ -118,7 +121,9 @@
     <script src="bower_components/rxjs/dist/rx.time.min.js"></script>
     <script src="bower_components/rxjs/dist/rx.virtualtime.js"></script>
     <script src="bower_components/rxjs/dist/rx.virtualtime.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <!-- endbower -->
+    <script src="bower_components/gridster/dist/jquery.gridster.min.js"></script>
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -127,6 +132,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/listasalidas.js"></script>
         <script src="scripts/controllers/compraboletos.js"></script>
+        <script src="scripts/controllers/camion.js"></script>
         <!-- endbuild -->
 </body>
 </html>

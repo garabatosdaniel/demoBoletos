@@ -11,6 +11,6 @@ angular.module('boletosApp')
   .controller('CamionCtrl', function ($scope) {
     jQuery('.gridster ul').gridster({
       'widget_margins': [10, 10],
-      'widget_base_dimensions': [140, 140]
+      'widget_base_dimensions': [120, 120]
     });
   });

@@ -1,7 +1,7 @@
-<h1></h1>
+<!--<h1>{{clock}}</h1>-->
 <div class="panel panel-warning">
   <!-- Default panel contents -->
-  <div class="panel-heading"><h1><img src="images/autoBusB.png" width="30px">  Ciudad de Mexico</h1></div>
+  <div class="panel-heading"><h1><img src="images/autoBusB.png" width="30px">  Ciudad de Mexico <span class="pull-right">{{clock | date:'mediumTime'}} </span></h1> </div>
   <table id="customers" class="table table-striped">
     <head>
     	<th>Salida</th>

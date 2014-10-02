@@ -18,4 +18,12 @@ angular.module('boletosApp')
     {departure:'21:30', arrival:'05:30', destino:'Tampico', escalas: '', disponibles:4, total:50, puerta: 'B0'}
 
     ];
+    var updateClock = function(){
+      $scope.clock = new Date();
+    }
+    updateClock();
+
+    setInterval(function(){
+      $scope.$apply(updateClock);
+    },1000);
   });

@@ -1,11 +1,11 @@
 #customers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    //font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
     border-collapse: collapse;
 }
 
 #customers td, #customers th {
-    font-size: 2em;
+    font-size: 1.5em;
     border: 1px solid #ffffff;
     padding: 3px 7px 2px 7px;
 }
@@ -30,6 +30,6 @@
 }
 
 #customers td.info  {
-    color: #423024;
+    color: #ffffff;
     background-color: #DEB466;
 }

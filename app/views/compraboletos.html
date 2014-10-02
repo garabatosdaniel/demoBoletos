@@ -1,52 +1,74 @@
 <div class="row">
+  <div class="col-sm-4">
+    <form role="form" class="well">
+      <div class="form-group">
+        <label for="salida">Salida</label>
+        <br/>
+        <select id="salida" style="width:200px" ng-model="zoom" ui-select2=""
+                ng-options="z.name as z.name for z in estates"></select>
+      </div>
+      <div class="form-group">
+        <label for="destino">Destino</label>
+        <br/>
+        <select id="destino" style="width:200px" ng-model="zoom" ui-select2=""
+                ng-options="z.name as z.name for z in estates"></select>
+      </div>
+      <div class="form-group">
+        <label for="salida">Fecha</label>
+        <br/>
+        <input type="text" ui-date="" ui-date-format="yy/mm/dd" ng-model="trackingReport.periodStartDate" required>
+      </div>
 
-<div class="col-sm-4">
-  <form role="form">
-    <div class="form-group">
-      <label for="salida">Salida</label>
-      <br/>
-      <select id="salida" style="width:200px" ng-model="zoom" ui-select2="" ng-options="z.name as z.name for z in estates"></select>
-    </div>
-    <div class="form-group">
-      <label for="destino">Destino</label>
-      <br/>
-      <select id="destino" style="width:200px" ng-model="zoom" ui-select2="" ng-options="z.name as z.name for z in estates"></select>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">Numero de boletos</label>
-      <input type="number" min="1" id="exampleInputFile">
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox">Requiere factura?
-      </label>
-    </div>
-    <button type="submit" ng-click="buscaBoletos()" class="btn btn-default">Buscar</button>
-  </form>
 
-</div>
-  <div class="col-sm-8">
-    <h2>Resultados</h2>
-      <table id="customers" class="table table-striped" ng-show="showResult">
+      <div class="form-group">
+        <label for="ticket">Numero de boletos</label>
+        <input style="width:100px" type="number" class="form-control" id="ticket" placeholder="boletos">
+      </div>
+      <button type="submit" ng-click="buscaBoletos()" class="btn btn-info">Buscar</button>
+    </form>
+  </div>
+  <div class="col-sm-8 well">
+    <div ng-show="showResult">
+      <h2 class="text-primary" >Resultados</h2>
+      <table class="table  table-hover">
         <thead>
-          <th>Horario</th>
-          <th>Origen</th>
-          <th>Destino</th>
-          <th>Tiempo estimado</th>
-          <th>Precio</th>
-          <th>Disponibles</th>
+        <th>Horario</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Tiempo estimado</th>
+        <th>Precio</th>
+        <th>Disponibles</th>
 
         </thead>
         <tbody>
-          <tr class="info" ng-repeat="item in serchResult" >
-            <td>{{item.horario}}</td>
-            <td>{{item.terminalSalida}}</td>
-            <td>{{item.terminalLlegada}}</td>
-            <td>{{item.tiempoEstidmado}}</td>
-            <td>{{item.precio}}</td>
-            <td>{{item.disponibles}}</td>
-          </tr>
+        <tr ng-repeat="item in serchResult" ng-class-odd="'info'">
+          <td>{{item.horario}}</td>
+          <td>{{item.terminalSalida}}</td>
+          <td>{{item.terminalLlegada}}</td>
+          <td>{{item.tiempoEstidmado}}</td>
+          <td>{{item.precio}}</td>
+          <td>{{item.disponibles}}</td>
+        </tr>
         </tbody>
       </table>
+      <div class="row">
+      <div class="col-sm-2 col-md-2">
+        <div class="thumbnail">
+          <img src="images/banner01.png" alt="Promo">
+          <div class="caption">
+            <center><a href="#" class="btn btn-primary" role="button">Ver mas</a></center>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <div class="thumbnail">
+          <img src="images/banner02.png" alt="Promo">
+          <div class="caption">
+            <center><a href="#" class="btn btn-primary" role="button">Ver mas</a></center>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 </div>

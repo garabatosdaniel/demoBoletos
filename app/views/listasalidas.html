@@ -1,12 +1,7 @@
-<h1>Tablero de Salidas</h1>
-<div class="panel panel-default">
+<h1></h1>
+<div class="panel panel-warning">
   <!-- Default panel contents -->
-  <div class="panel-heading">Ciudad de Mexico</div>
-  <div class="panel-body">
-    <p>Los horarios estan sujetos a cambios sin previo aviso</p>
-  </div>
-
-  <!-- Table -->
+  <div class="panel-heading"><h1><img src="images/autoBusB.png" width="30px">  Ciudad de Mexico</h1></div>
   <table id="customers" class="table table-striped">
     <head>
     	<th>Salida</th>
@@ -20,13 +15,37 @@
 		<tr ng-repeat="item in salidas" ng-class-odd="'in'" ng-class-even="'out'">
 			<td>{{item.departure}}</td>
       <td>{{item.arrival}}</td>
-			<td class="info"><b>{{item.destino}}</b></td>
+			<td class="info"><p class="text-warning"><b>{{item.destino}}</b></p></td>
       <td>{{item.escalas}}</td>
-			<td>{{item.disponibles}}</td>
-			<td>{{item.puerta}}</td>
+			<td><p ng-class="{'text-danger': item.disponibles<5}">{{item.disponibles}}</p></td>
+			<td><p class="text-warning">{{item.puerta}}</p></td>
 		</tr>    
     </tbody>
-    
   </table>
-
 </div>
+
+<!--<div class="panel panel-warning">-->
+  <!--&lt;!&ndash; Default panel contents &ndash;&gt;-->
+  <!--<div class="panel-heading">  <h1><img src="images/autoBus.png" width="30px"> Veracruz</h1></div>-->
+  <!--<table id="customers" class="table table-striped">-->
+    <!--<head>-->
+      <!--<th>Salida</th>-->
+      <!--<th>Llegada</th>-->
+      <!--<th>Destino</th>-->
+      <!--<th>Escalas</th>-->
+      <!--<th>Disponibles</th>-->
+      <!--<th>Autobús</th>-->
+    <!--</head>-->
+    <!--<tbody>-->
+    <!--<tr ng-repeat="item in salidas" ng-class-odd="'in'" ng-class-even="'out'">-->
+      <!--<td>{{item.departure}}</td>-->
+      <!--<td>{{item.arrival}}</td>-->
+      <!--<td class="info"><p class="text-warning"><b>{{item.destino}}</b></p></td>-->
+      <!--<td>{{item.escalas}}</td>-->
+      <!--<td>{{item.disponibles}}</td>-->
+      <!--<td><p class="text-warning">{{item.puerta}}</p></td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+
+<!--</div>-->

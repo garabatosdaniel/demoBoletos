@@ -15,18 +15,18 @@ angular.module('boletosApp')
  $scope.list4 = [];
 
   $scope.list5 = [
-    { 'title': 'Asiento 1', 'drag': true, 'img':'images//sit.png'},
-    { 'title': 'Asiento 2', 'drag': true, 'img':'images//sit.png'},
-    { 'title': 'Asiento 3', 'drag': true, 'img':'images//sit.png'},
-    { 'title': 'Asiento 4', 'drag': true, 'img':'images//sit.png'},
-    { 'title': 'Asiento 5', 'drag': true, 'img':'images//sit.png' },
-    { 'title': 'Asiento 6', 'drag': true, 'img':'images//sit.png' },
-    { 'title': 'Asiento 7', 'drag': true, 'img':'images//sit.png' },
-    { 'title': 'Asiento 8', 'drag': true, 'img':'images//sit.png' },
-    { 'title': 'Asiento 9', 'drag': true, 'img':'images//sit.png' },
-    { 'title': 'Asiento 10', 'drag': true, 'img':'images//sit.png' },
-    { 'title': 'TV 1', 'drag': true },
-    { 'title': 'TV 2', 'drag': true },
+    { 'title': 'Asiento 1', 'drag': true, 'img':'images/sit.png'},
+    { 'title': 'Asiento 2', 'drag': true, 'img':'images/sit.png'},
+    { 'title': 'Asiento 3', 'drag': true, 'img':'images/sit.png'},
+    { 'title': 'Asiento 4', 'drag': true, 'img':'images/sit.png'},
+    { 'title': 'Asiento 5', 'drag': true, 'img':'images/sit.png' },
+    { 'title': 'Asiento 6', 'drag': true, 'img':'images/sit.png' },
+    { 'title': 'Asiento 7', 'drag': true, 'img':'images/sit.png' },
+    { 'title': 'Asiento 8', 'drag': true, 'img':'images/sit.png' },
+    { 'title': 'Asiento 9', 'drag': true, 'img':'images/sit.png' },
+    { 'title': 'Asiento 10', 'drag': true, 'img':'images/sit.png' },
+    { 'title': 'TV 1', 'drag': true, 'img':'images/tv.png' },
+    { 'title': 'TV 2', 'drag': true, 'img':'images/tv.png'},
     { 'title': 'Sanitario', 'drag': true, 'img':'images//wc.png' }
   ];
 

@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.date',
-    'ui.select2'
+    'ui.select2',
+    'ngDragDrop'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -48,6 +49,10 @@ angular
       .when('/buscaBoletos', {
         templateUrl: 'views/buscaboletos.html',
         controller: 'BuscaboletosCtrl'
+      })
+      .when('/configuraAutobus', {
+        templateUrl: 'views/configuraautobus.html',
+        controller: 'ConfiguraautobusCtrl'
       })
       .otherwise({
         redirectTo: '/'

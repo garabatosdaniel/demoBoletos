@@ -2,7 +2,7 @@
   <div class="col-sm-4">
     <form role="form" class="well">
       <div class="form-group">
-        <label for="salida">Salida</label>
+        <label for="salida">Origen</label>
         <br/>
         <select id="salida" style="width:200px" ng-model="zoom" ui-select2=""
                 ng-options="z.name as z.name for z in estates"></select>
@@ -18,10 +18,8 @@
         <br/>
         <input type="text" ui-date="" ui-date-format="yy/mm/dd" >
       </div>
-
-
       <div class="form-group">
-        <label for="ticket">Numero de boletos</label>
+        <label for="ticket">Número de boletos</label>
         <input style="width:100px" type="number" class="form-control" id="ticket" placeholder="boletos">
       </div>
       <button type="submit" ng-click="buscaBoletos()" class="btn btn-info">Buscar</button>
@@ -32,43 +30,54 @@
       <h2 class="text-primary" >Resultados</h2>
       <table class="table  table-hover">
         <thead>
-        <th>Horario</th>
-        <th>Origen</th>
-        <th>Destino</th>
-        <th>Tiempo estimado</th>
-        <th>Precio</th>
-        <th>Disponibles</th>
-
+        <th><center>Horario</center></th>
+        <th><center>Origen</center></th>
+        <th><center>Destino</center></th>
+        <th><center>Tiempo estimado</center></th>
+        <th><center>Precio</center></th>
+        <th><center>Disponibles</center></th>
+        <th><center>Accion</center></th>
         </thead>
         <tbody>
         <tr ng-repeat="item in serchResult" ng-class-odd="'info'">
           <td>{{item.horario}}</td>
           <td>{{item.terminalSalida}}</td>
           <td>{{item.terminalLlegada}}</td>
-          <td>{{item.tiempoEstidmado}}</td>
+          <td><center>{{item.tiempoEstidmado}}</center></td>
           <td>{{item.precio}}</td>
-          <td>{{item.disponibles}}</td>
+          <td><center>{{item.disponibles}}</center></td>
+          <td>
+            <small ng-show="item.disponibles>0"><center><a href="#" class="btn btn-info" role="button">Comprar</a></center></small>
+          </td>
         </tr>
         </tbody>
       </table>
-      <div class="row">
-      <div class="col-sm-2 col-md-2">
-        <div class="thumbnail">
-          <img src="images/banner01.png" alt="Promo">
-          <div class="caption">
-            <center><a href="#" class="btn btn-primary" role="button">Ver mas</a></center>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-2 col-md-2">
-        <div class="thumbnail">
-          <img src="images/banner02.png" alt="Promo">
-          <div class="caption">
-            <center><a href="#" class="btn btn-primary" role="button">Ver mas</a></center>
-          </div>
-        </div>
-      </div>
-    </div>
+      <!--<div class="row">-->
+      <!--<div class="col-sm-4 col-md-4">-->
+        <!--<div class="thumbnail">-->
+          <!--<img src="images/banner01.png" alt="Promo">-->
+          <!--<div class="caption">-->
+            <!--<center><a href="#" class="btn btn-primary" role="button">Ver más</a></center>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm-4 col-md-4">-->
+        <!--<div class="thumbnail">-->
+          <!--<img src="images/banner02.png" alt="Promo">-->
+          <!--<div class="caption">-->
+            <!--<center><a href="#" class="btn btn-primary" role="button">Ver más</a></center>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+        <!--<div class="col-sm-4 col-md-4">-->
+          <!--<div class="thumbnail">-->
+            <!--<img src="images/banner02.png" alt="Promo">-->
+            <!--<div class="caption">-->
+              <!--<center><a href="#" class="btn btn-primary" role="button">Ver más</a></center>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     </div>
   </div>
 </div>
